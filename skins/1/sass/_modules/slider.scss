@@ -1,9 +1,9 @@
 ///* slider module */
 
-@import '_mixins/border-radius';
-@import '_mixins/box-shadow';
-@import '_mixins/transition';
-@import '_mixins/vertical-align';
+@import '../../1/sass/_mixins/border-radius';
+@import '../../1/sass/_mixins/box-shadow';
+@import '../../1/sass/_mixins/transition';
+@import '../../1/sass/_mixins/vertical-align';
 
 $size-slider-width: 1000px;
 $size-slider-height: $size-primary-height;
