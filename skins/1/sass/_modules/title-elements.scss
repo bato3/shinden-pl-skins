@@ -1,7 +1,7 @@
 // Pojedyncze (sub)bloki używane w tytułach.
 
-@import '_mixins/border-radius';
-@import '_mixins/clearfix';
+@import '../../1/sass/_mixins/border-radius';
+@import '../../1/sass/_mixins/clearfix';
 
 ul.genres{
     list-style: none;
