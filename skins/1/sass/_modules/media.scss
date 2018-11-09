@@ -1,10 +1,10 @@
 ///* media module */
 
-@import '../../1/sass/_mixins/border-radius';
-@import '../../1/sass/_mixins/box-shadow';
-@import '../../1/sass/_mixins/transition';
-@import '../../1/sass/_mixins/column-count';
-@import '../../1/sass/_mixins/font-size';
+@import '../_mixins/border-radius';
+@import '../_mixins/box-shadow';
+@import '../_mixins/transition';
+@import '../_mixins/column-count';
+@import '../_mixins/font-size';
 
 $media-comment-img-width: 100px;
 $media-image-resized-max-size: 200px;

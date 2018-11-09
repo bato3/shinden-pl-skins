@@ -1,12 +1,12 @@
 
-@import '../../1/sass/_mixins/border-radius';
-@import '../../1/sass/_mixins/box-shadow';
-@import '../../1/sass/_mixins/vertical-align';
-@import '../../1/sass/_mixins/linear-gradient';
-@import '../../1/sass/_mixins/transition';
-@import '../../1/sass/_mixins/box-shadow';
-@import '../../1/sass/_mixins/box-sizing';
-@import '../../1/sass/_mixins/clearfix';
+@import '../_mixins/border-radius';
+@import '../_mixins/box-shadow';
+@import '../_mixins/vertical-align';
+@import '../_mixins/linear-gradient';
+@import '../_mixins/transition';
+@import '../_mixins/box-shadow';
+@import '../_mixins/box-sizing';
+@import '../_mixins/clearfix';
 %box-padding {
     padding: 0 10px 0 3px;
 }
