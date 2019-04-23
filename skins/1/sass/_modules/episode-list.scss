@@ -84,3 +84,19 @@ section.video-info {
         background-image: url(../../../css/favicons/kyozetsu.ico);
     }
 }
+
+
+
+.table-responsive {
+
+    @media (max-width: 600px) {
+        .chap-type, .chap-date {
+            display: none;
+        }
+    }
+    @media (max-width: 450px) {
+        .chap-title {
+            display: none;
+        }
+    }
+}

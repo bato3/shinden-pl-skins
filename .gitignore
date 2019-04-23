@@ -51,3 +51,9 @@ skins/1/ac.css
 skins/1/ac-dist.css
 skins/1/sass/*.css
 skins/*/sass/_mixins/*
+userlist/
+userlist/*
+skins/*/css/
+skins/*/css/*
+*.psd
+skins/3/css/styles.css

@@ -296,3 +296,7 @@ $media-image-resized-max-size: 200px;
         margin-top: 4px;
     }
 }
+
+.is-inactive.selected {
+  color: $color-brand-second;
+}

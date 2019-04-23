@@ -1,0 +1,44 @@
+
+@import '../_mixins/clearfix';
+article.waifu {
+    section {
+        @include clearfix();
+    }
+    dl {
+        dt {
+            float: left;
+            display: inline-block;
+            width: 5em;
+            text-align: right;
+            font-weight: bold;
+            margin-right: 7px;
+        }
+    }
+    $waifu-width: 133px;
+    $waifu-padding: 7px;
+    ul.waifu-cards {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @include clearfix();
+        li {
+
+            h3 {
+                width: $waifu-width;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            display: inline-block;
+            float: left;
+            margin:7px;
+            padding:$waifu-padding;
+            &:hover{
+                background-color: $media-row-hover-bg-color;
+            }
+        }
+        img {
+            max-width:$waifu-width;
+        }
+    }
+}

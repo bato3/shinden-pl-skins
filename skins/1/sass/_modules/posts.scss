@@ -69,8 +69,8 @@ ul.posts{
 }
 fieldset.quote{
     padding-left: 1em;
-    background-color: rgba($color-background-medium, .5);
-    color:$color-medium;
+    background-color: rgba($form-bg-legend-color, .5);
+    color:$form-legend-color;
     &::before{
         content: ',,';
         float:left;

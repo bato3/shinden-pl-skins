@@ -1,5 +1,6 @@
-$min-width-for-searchform: 1000px;
+$min-width-for-searchform: 824px;
 $top-button-bgcolor: #868986;
+$zwezamy-pole-szukajki-width: 926px;
 
 .owl-carousel,
 .owl-carousel .owl-item {
@@ -343,7 +344,7 @@ $top-button-bgcolor: #868986;
 .top-bar {
     background: #07090e;
     height: 36px;
-    max-width: 1030px;
+    max-width: $size-global-max-width;
     margin:auto;
     .top-button {
         background: $top-button-bgcolor;
@@ -373,26 +374,8 @@ $top-button-bgcolor: #868986;
 .top-bar--menu {
     display: inline-block;
 }
-.top-bar--user {
-    display: inline-block;
-    float:right;
-    position: relative;
-    @media (max-width:$nav-main-mobile-break-point){
-        float:none;
-    }
-    .search-toggle {
-        color:#fff;
-        display: inline-block;
-        background: transparent;
-        border:none;
-        @media (min-width: $min-width-for-searchform) {
-            display: none;
-        }
-    }
-    .top-button {
-        position: relative;
 
-    }
+.top-bar--nav-user, .top-button--user{
     .alerts-cnt, .sprite {
         display: block;
         position: absolute;
@@ -409,11 +392,68 @@ $top-button-bgcolor: #868986;
             margin-right: 3px;
         }
     }
+}
+.top-bar--user {
+    display: inline-block;
+    float:right;
+    position: relative;
+    @media (max-width:$nav-main-mobile-break-point){
+        float:none;
+    }
+    & > button {
+
+        @media (max-width:$nav-main-mobile-break-point){
+            float:right;
+            line-height: 3em;
+            &.search-toggle {
+                height: 44px;
+            }
+        }
+    }
+    button {
+        color:#fff;
+        display: inline-block;
+        background: transparent;
+        border:none;
+        position: relative;
+    }
+    .search-toggle {
+        height: 24px;
+        overflow: hidden;
+        .fa {
+            font-size: 1.6em;
+        }
+        @media (min-width: $min-width-for-searchform) {
+            display: none;
+        }
+    }
+    .top-button {
+        position: relative;
+
+    }
+
+    .btnadm{
+        position:relative;
+         .sprite {
+            position: relative;
+            bottom:-7px;
+            left:-12px;
+            font-size: 8px;
+            background-color: darkred;
+            color:white;
+            padding:1px 3px;
+            display: inline-block;
+            line-height: normal;
+            //right:-8px;
+            font-weight: normal;
+        }
+    }
+
     #menu-search {
         margin-top: -2px;
         margin-bottom: -10px;
         font-size: 1.1rem;
-        @media (max-width: $min-width-for-searchform + 1) {
+        @media (max-width: $min-width-for-searchform - 1) {
             display: none;
         }
         display: inline-block;
@@ -445,10 +485,11 @@ $top-button-bgcolor: #868986;
             width: 60px;
             overflow: hidden;
         }
+        $add1: 60px;
         input {
             padding: 0.3em 0.4em;
-            width:190px;
-            @media ( max-width: 1010px) {
+            width:190px + $add1;
+            @media ( max-width: $zwezamy-pole-szukajki-width) {
                 width: 150px;
             }
         }
@@ -464,10 +505,10 @@ $top-button-bgcolor: #868986;
             //top: -1px;
         }
         .tt-menu, .tt-dropdown-menu {
-            @media ( max-width: 1010px) {
+            width: 278px + $add1;
+            @media ( max-width: $zwezamy-pole-szukajki-width) {
                 width: 238px;
             }
-            width: 278px;
 
             z-index: 1005;
         }
@@ -554,9 +595,10 @@ $top-button-bgcolor: #868986;
     width:200px;
     z-index: 99;
     font-size: 1.1rem;
-    @media (max-width:950px){
+    @media (max-width:$nav-main-mobile-break-point){
         right: initial;
         left:0;
+
     }
     a {
         color:#fff;
@@ -683,4 +725,13 @@ $top-button-bgcolor: #868986;
 .logo .logo-title {
     display: block;
     img {padding-top: 40px;}
+}
+
+img.av-size36x48 {
+    max-width: 36px;
+    max-height: 48px;
+}
+
+header img.av-size36x48 {
+    max-height: 26px;
 }

@@ -1,4 +1,4 @@
-$layer-bottom-position: 39px;
+$layer-bottom-position: 34px;
 #tresc{
     background-color: #fff;
     color: #007dcc;
@@ -13,12 +13,12 @@ $layer-bottom-position: 39px;
     color: #fff;
     height: 29px;
     display: flex;
-    z-index: 1001;
+    z-index: 989;
     padding-top: 4px;
     padding-left: 10px;
     border: 1px solid #535353;
-	left: calc((100% - 1050px )/2);
-	right: calc((100% - 1050px )/2);
+	left: calc((100% - #{$size-global-max-width} )/2);
+	right: calc((100% - #{$size-global-max-width} )/2);
         @media (max-width:1030px){
             left:3px;
             right: 3px;
@@ -26,7 +26,7 @@ $layer-bottom-position: 39px;
     }
 #shoutbox{
     position:fixed;
-    bottom: $layer-bottom-position;
+    top: $layer-bottom-position;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -34,12 +34,12 @@ $layer-bottom-position: 39px;
     width: 100%;
     display: none;
     overflow:hiden;
-    z-index: 1001;
+    z-index: 989;
     max-height: 85vh;
     }
 #ts3{
     position:fixed;
-    bottom: $layer-bottom-position;
+    top: $layer-bottom-position;
     right: 0px;
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
@@ -47,12 +47,12 @@ $layer-bottom-position: 39px;
     display: none;
     overflow:hiden;
     margin-top: 50px;
-    z-index: 1001;
+    z-index: 989;
     max-height: 85vh;
     }
 #fm{
     position:fixed;
-    bottom: $layer-bottom-position;
+    top: $layer-bottom-position;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -62,11 +62,11 @@ $layer-bottom-position: 39px;
     width: 100%;
     display: none;
     overflow:hiden;
-    z-index: 1001;
+    z-index: 989;
     }
 #face{
     position:fixed;
-    bottom: $layer-bottom-position;
+    top: $layer-bottom-position;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -74,12 +74,12 @@ $layer-bottom-position: 39px;
     width: auto;
     display: none;
     overflow:hiden;
-    z-index: 1001;
+    z-index: 989;
     max-height: 85vh;
     }
 #lm {
     position: fixed;
-    bottom: $layer-bottom-position;
+    top: $layer-bottom-position;
     background-color: rgba(0,0,0,0.8);
     color: #fff;
     height: 400px;
@@ -87,9 +87,9 @@ $layer-bottom-position: 39px;
     max-height: 85vh;
     display: none;
     overflow: hiden;
-    z-index: 1001;
-    left: calc((100% - 1050px )/2);
-	right: calc((100% - 1050px )/2);
+    z-index: 989;
+    left: calc((100% - #{$size-global-max-width} )/2);
+	right: calc((100% - #{$size-global-max-width} )/2);
     @media (max-width:1030px){
         left:3px;
         right: 3px;
@@ -97,7 +97,7 @@ $layer-bottom-position: 39px;
 }
 #la {
     position: fixed;
-    bottom: $layer-bottom-position;
+    top: $layer-bottom-position;
     background-color: rgba(0,0,0,0.8);
     color: #fff;
     height: 400px;
@@ -105,9 +105,9 @@ $layer-bottom-position: 39px;
     max-height: 80vh;
     display: none;
     overflow: hiden;
-    z-index: 1001;
-    left: calc((100% - 1050px )/2);
-	right: calc((100% - 1050px )/2);
+    z-index: 989;
+    left: calc((100% - #{$size-global-max-width} )/2);
+	right: calc((100% - #{$size-global-max-width} )/2);
     @media (max-width:1030px){
         left:3px;
         right: 3px;
@@ -139,7 +139,7 @@ $layer-bottom-position: 39px;
 .btn{
   position:fixed;
   right: calc((100% - 1000px )/2);
-  z-index: 1001;
+  z-index: 989;
   padding-bottom: 6px;
   @media (max-width:1030px){
       right: 15px;
@@ -175,7 +175,7 @@ $layer-bottom-position: 39px;
     display: none;
     overflow-y:auto;
     overflow-x:hidden;
-    z-index: 1001;
+    z-index: 989;
     .message{
         margin:30px auto;
         color:lightgreen;
@@ -244,18 +244,24 @@ $layer-bottom-position: 39px;
 }
 #admin-notify {
     position: fixed;
-    bottom: 35px;
+    top: 35px;
     background-color: rgba(0, 0, 0, .9);
     color: #fff;
     height: auto;
     display: none;
     overflow: hiden;
-    margin-top: 50px;
-    z-index: 1001;
+    margin-bottom: 0px;
+    z-index: 989;
     height: 85vh;
-    left: calc(((100% - 1050px + 6px)/2));
-    @media (max-width:1030px){
-        left:3px;
+    right: calc(((100% - #{$size-global-max-width} + 6px)/2) + 200px) ;
+    @media (max-width:823px){
+        right:3px;
+    }
+    @media (max-width:$nav-main-mobile-break-point) {
+        right: auto;
+        right: initial;
+        left: 0px;
+
     }
 
 }
@@ -266,16 +272,24 @@ $layer-bottom-position: 39px;
     img {
         height: 25px
     }
-    .sprite {
-        position: relative;
-        top:-7px;
-        left:-5px;
-        font-size: 8px;
-        background-color: darkred;
-        color:white;
-        padding:1px 3px;
-        display: inline-block;
-        line-height: normal;
-        right:-8px
+
+    //.sprite {
+    //    position: relative;
+    //    top:-7px;
+    //    left:-5px;
+    //    font-size: 8px;
+    //    background-color: darkred;
+    //    color:white;
+    //    padding:1px 3px;
+    //    display: inline-block;
+    //    line-height: normal;
+    //    right:-8px
+    //}
+}
+
+.mobile-visible, .mobile-show {
+    display:none;
+    @media (max-width: 940px) {
+        display:inline-block;
     }
 }

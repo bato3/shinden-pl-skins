@@ -67,7 +67,7 @@ $color_wedgewood_approx: #5081a9;
   &.prev{
     overflow:hidden;
     display:none;
-    background-color:rgba(black, .1);
+    background-color:rgba($font-base-color, .1);
   }
   .achv-img{
     float:right;

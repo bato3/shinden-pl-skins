@@ -7,6 +7,30 @@
 @import '../_mixins/box-shadow';
 @import '../_mixins/box-sizing';
 @import '../_mixins/clearfix';
+
+.hp{
+    display: none;
+}
+@media (min-width:$size-global-max-width){
+    .hp{
+        top: 2px;
+        position: absolute;
+        display: block;
+        //width: 220px;  background-color: red;  height:300px;
+     }
+    .hp-l {
+        left: -2px;
+        transform: translateX(-100%);
+    }
+    .hp-r {
+        right: -2px;
+        transform: translateX(100%);
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+
 %box-padding {
     padding: 0 10px 0 3px;
 }

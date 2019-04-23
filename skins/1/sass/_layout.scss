@@ -130,7 +130,7 @@ body {
 .mobile-visible, .mobile-show {
     display:none;
     @media (max-width: 940px) {
-        display:block;
+        display:inline-block;
     }
 }
 .mobile-hidden {
