@@ -30,3 +30,35 @@ div.rateit div {
         background-image: url('../img/delete.gif');
     }
 }
+
+x-star-rating {
+    font: normal normal normal 16px/1 FontAwesome;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+x-star-rating > .star::after {
+    content: '\f006';
+    color:$nav-bg-color;// #555;
+    margin:1px;
+}
+
+x-star-rating > .star.full::after {
+    content: '\f005';
+    color: $color-accent;//#fa6;
+}
+
+.x-rate-tooltip{
+	position: absolute;
+	display: none;
+    background-color: $input-ro-color;
+    color: $input-ro-bg-color;
+    text-align: center;
+	padding: 7px;
+	z-index: 1000;
+	top: 400px;
+    left: 400px;
+    line-height: 1;
+    border-radius: 1px;
+    box-shadow: 3px 3px 1px darken($input-ro-color, 20%);
+}

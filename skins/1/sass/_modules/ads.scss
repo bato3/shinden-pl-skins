@@ -10,3 +10,6 @@
 .r-r {
     display: none;
 }
+body>div[id^="c_window_"] {
+    margin: 0 !important;
+}

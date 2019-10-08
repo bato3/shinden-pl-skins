@@ -120,6 +120,30 @@ $color_wedgewood_approx: #5081a9;
     }
   }
 
+  aside {
+    float:left;
+    width:95px;
+    text-align:center;
+    line-height: 1;
+    &.sum {
+      position: relative;
+      .weight {
+        border-top: 3px solid $color-brand-dark;
+      }
+      .op {
+        position: absolute;
+        top: -3rem;
+        font-size:3rem;
+      }
+    }
+    .weight {
+      font-size:3rem;
+      padding-bottom:1rem;
+    }
+  }
+  &.earned {
+    background-color: rgba($progressbar-color, 0.3);
+  }
 }
 .achv-media{
   margin-top:20px;
@@ -176,4 +200,57 @@ $color_wedgewood_approx: #5081a9;
     .right{
         float:right;
     }
+}
+
+.waifu-packet {
+  .summary {
+    span{
+      display: inline-block;
+      min-height: 3em;
+    }
+    .ico {
+      display: block;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: bold;
+      color: $input-ro-color;
+      .fa-check-circle {
+        color: $progressbar-color;
+      }
+    }
+  }
+  .form {
+    input[type=radio] {
+      float: left;
+      position:relative;
+      top:1em;
+    }
+    label {
+      background-color: $color-background-2;
+      display:block; 
+      margin-left:1.5em; 
+      padding:0.5em; 
+      border-radius:0.4em;
+      h3 {
+        margin-top:0;
+      }
+    }
+    input[type=radio]:checked + label {
+      background-color: $media-row-active-bg-color;
+    }
+    .submit-row {
+      text-align: center;
+      background-color: $color-brand-second;
+      padding:.5rem;
+      button {
+        padding: 0.5em;
+      }
+    }
+  }
+  .achv {
+    h2.big {
+      margin-top: 3em;
+      font-size: 1.75rem;;
+    }
+  }
 }
