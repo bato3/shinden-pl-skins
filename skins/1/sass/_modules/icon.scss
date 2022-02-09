@@ -54,3 +54,11 @@ $icon-green-color: #42CEAB;
 .flag-icon-en.flag-icon-squared{
 	background-image:url(https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/flags/1x1/gb.svg)
 }
+
+
+.visible-hover {
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
+}

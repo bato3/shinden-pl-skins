@@ -1,5 +1,74 @@
 
 @import '../_mixins/clearfix';
+
+
+.ch-st-list {
+    @media (min-width: 850px) {
+        column-count: 2;
+        column-gap: 7px;
+    }
+    img {
+        vertical-align: top;
+        width: 50px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    h3, p {
+        margin: 0;
+    }
+    .ch-st-item {
+        text-align: right;
+        border-bottom: 1px solid $color-background-3;
+        padding: 3px;
+        @include clearfix();
+        min-height: 54px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        .item-l.l{
+            max-width: unset;
+        }
+    }
+    .item-l {
+        float: left;
+        display: flex;
+        text-align: left;
+        max-width: 41%;
+        img {
+            margin: 0 3px 3px 0;
+        }
+    }
+    .item-r{
+        display: inline-flex;
+        justify-content: flex-end;
+        min-width: 51%;
+        p {
+            text-align: right;
+        }
+        img{
+            margin:  0 0 3px 3px;
+        }
+    }
+    .ch-st-item:hover>.del-b, .item-r:hover .del-b{
+        a{
+            opacity: 0.7;
+        }
+    }
+    .del-b {
+        display: inline-block;
+        a{
+            opacity: 0.45;
+            display: block;
+            &:hover {
+                opacity: 1!important;
+            }
+        }
+    }
+    .p-txt {
+        margin:0 0.5ex;
+        display: inline-flex;
+        flex-direction: column;
+    }
+}
 .person-list {
     @include column-count(2);
     @include clearfix();
@@ -24,6 +93,11 @@
         &:hover .person-delete, &:hover .character-delete {
             visibility: visible;
         }
+}
+.is-mobile {
+    .person-character-item .person-delete, .character-delete {
+        visibility: visible;
+    }
 }
 
 .person-character-item .person {

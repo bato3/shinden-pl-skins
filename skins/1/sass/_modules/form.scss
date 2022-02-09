@@ -22,7 +22,6 @@ $track-total-h: $track-h + $ruler-gap + $ruler-line-h;
 $thumb-d: .5em;
 
 
-
 .range {
   display: flex;
   flex-direction: column;
@@ -112,7 +111,10 @@ input[type='range']::-ms-thumb {
 input[type='range']::-ms-tooltip {
   display: none;
 }
-input[type='range']::-webkit-slider-runnable-track:before, input[type='range']::-webkit-slider-runnable-track:after, input[type='range'] /deep/ #track:before, input[type='range'] /deep/ #track:after {
+input[type='range']::-webkit-slider-runnable-track:before,
+input[type='range']::-webkit-slider-runnable-track:after/*,
+input[type='range'] /deep/ #track:before,
+input[type='range'] /deep/ #track:after */{
   position: absolute;
   z-index: 2;
   top: 0;
@@ -122,11 +124,11 @@ input[type='range']::-webkit-slider-runnable-track:before, input[type='range']::
   background: $input-bg-color;
   content: '';
 }
-input[type='range']::-webkit-slider-runnable-track:after, input[type='range'] /deep/ #track:after {
+input[type='range']::-webkit-slider-runnable-track:after/*, input[type='range'] /deep/ #track:after */{
   right: 0;
   left: auto;
 }
-input[type='range']::-webkit-slider-thumb:before, input[type='range'] /deep/ #thumb:before {
+input[type='range']::-webkit-slider-thumb:before/*, input[type='range'] /deep/ #thumb:before */{
   position: absolute;
   top: 50%;
   right: 50%;
@@ -152,14 +154,14 @@ input[type='range']:focus {
   opacity: .99;
 }
 
-/* Chrome/ Opera */
+/// Chrome/ Opera
 input[type='range']:not(*:root) {
   overflow: hidden;
   width: 8.5em;
   background-position: 0.1875em 1.55em;
 }
 
-/* IE */
+/// IE
 _:-ms-input-placeholder, :root input[type='range'] {
   width: 8.5em;
   background: repeating-linear-gradient(90deg, $base-c, $base-c 0.125em, transparent 0.125em, transparent 1.6em) no-repeat 0.25em 1.55em content-box;

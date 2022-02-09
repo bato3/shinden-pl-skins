@@ -39,7 +39,7 @@ x-star-rating {
 
 x-star-rating > .star::after {
     content: '\f006';
-    color:$nav-bg-color;// #555;
+    color: darken($color-medium, 10%);// #555;
     margin:1px;
 }
 

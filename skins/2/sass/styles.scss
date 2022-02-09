@@ -1,6 +1,7 @@
 /*generate grid */
 @import 'grid';
 @include generate_helper_classes();
+@import '../../1/sass/wafle-grid';
 
 @import 'base';
 @import 'layout';
@@ -8,4 +9,3 @@
 @import 'state';
 @import 'theme';
 @import 'typography';
-

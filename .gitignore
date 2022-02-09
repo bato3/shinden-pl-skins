@@ -57,3 +57,7 @@ skins/*/css/
 skins/*/css/*
 *.psd
 skins/3/css/styles.css
+debug.log
+skins/prepros.config
+skins/3/css/styles.css
+skins/8/*

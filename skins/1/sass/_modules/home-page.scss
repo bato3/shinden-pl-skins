@@ -241,6 +241,11 @@ $zwezamy-pole-szukajki-width: 926px;
         width:100%;
     }
 }
+.col-xs-none {
+    @media (max-width:765px) {
+        display: none;
+    }
+}
 .newTitle {
     border-bottom: 2px solid #525252!important;
     padding: 0!important;
@@ -730,6 +735,7 @@ $zwezamy-pole-szukajki-width: 926px;
 img.av-size36x48 {
     max-width: 36px;
     max-height: 48px;
+    overflow: hidden;
 }
 
 header img.av-size36x48 {
