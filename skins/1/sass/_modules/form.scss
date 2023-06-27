@@ -332,6 +332,10 @@ _:-ms-input-placeholder, :root input[type='range'] {
     position: relative;
     overflow: hidden;
     padding: 0 5px 5px 5px;
+    small {
+        font-size: x-small;
+        color: rgba($color-note-text,.8);
+    }
     .navigation{
         text-align: center;
         padding: 6px;

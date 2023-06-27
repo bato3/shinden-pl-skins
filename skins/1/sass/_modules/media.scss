@@ -8,6 +8,18 @@
 
 $media-comment-img-width: 100px;
 $media-image-resized-max-size: 200px;
+.clearfix {
+    @include clearfix();
+}
+.clear, .clear-both {
+    clear:both;
+}
+.clear-left {
+    clear:left;
+}
+.clear-right {
+    clear:right;
+}
 
 .media {
     margin: 10px;
@@ -145,6 +157,9 @@ $media-image-resized-max-size: 200px;
             margin: 4px auto;
         }
     }
+    p {
+        overflow: hidden;
+    }
 }
 .media-comment-actions {
     display: block;
@@ -166,7 +181,9 @@ $media-image-resized-max-size: 200px;
     }
 }
 .media-comment-signature {
-    border-top: 1px dashed $color-background-2;
+    border-top: 1px dashed $color-brand-on-bg3;
+    overflow: auto;
+    max-height: 150px;
 }
 
 

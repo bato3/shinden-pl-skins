@@ -1,5 +1,8 @@
 .unread-news, .unread-news .newTitle span {
     background-color: $color-background-3;
+    a {
+        color: $color-brand-on-bg3;
+    }
 
 }
 .news-list-item {

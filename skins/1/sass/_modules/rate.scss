@@ -1,33 +1,26 @@
 div.rateit div {
-    &.rateit-range
-    {
-        background-image: url('../img/rate-star.png');
+    &.rateit-range {
+        background-image: url("../img/rate-star.png");
     }
-    
-    &.rateit-hover
-    {
-        background-image: url('../img/rate-star.png');
+
+    &.rateit-hover {
+        background-image: url("../img/rate-star.png");
     }
-    
-    
-    &.rateit-selected
-    {
-        background-image: url('../img/rate-star.png');
+
+    &.rateit-selected {
+        background-image: url("../img/rate-star.png");
     }
-    
-    &.rateit-preset
-    {
-        background-image: url('../img/rate-star.png');
+
+    &.rateit-preset {
+        background-image: url("../img/rate-star.png");
     }
-    
-    &.rateit-preset-rtl
-    {
-        background-image: url('../img/rate-star.png');
+
+    &.rateit-preset-rtl {
+        background-image: url("../img/rate-star.png");
     }
-    
-    &.rateit-reset
-    {
-        background-image: url('../img/delete.gif');
+
+    &.rateit-reset {
+        background-image: url("../img/delete.gif");
     }
 }
 
@@ -35,28 +28,33 @@ x-star-rating {
     font: normal normal normal 16px/1 FontAwesome;
     display: inline-flex;
     cursor: pointer;
+    min-width: 99%;
+    .star {
+        font-family: emoji;
+    }
 }
 
 x-star-rating > .star::after {
-    content: '\f006';
-    color: darken($color-medium, 10%);// #555;
-    margin:1px;
+    content: "\f006";
+    font-family: FontAwesome;
+    color: darken($color-medium, 10%); // #555;
+    margin: 1px;
 }
 
 x-star-rating > .star.full::after {
-    content: '\f005';
-    color: $color-accent;//#fa6;
+    content: "\f005";
+    color: $color-accent; //#fa6;
 }
 
-.x-rate-tooltip{
-	position: absolute;
-	display: none;
+.x-rate-tooltip {
+    position: absolute;
+    display: none;
     background-color: $input-ro-color;
     color: $input-ro-bg-color;
     text-align: center;
-	padding: 7px;
-	z-index: 1000;
-	top: 400px;
+    padding: 7px;
+    z-index: 1000;
+    top: 400px;
     left: 400px;
     line-height: 1;
     border-radius: 1px;
